@@ -31,11 +31,27 @@
     <title>Loveclaw AI - Boutique OpenClaw setup</title>
     <meta name="description" content="An open-source AI assistant that runs 24/7 on appliance or dedicate infra. It can triage email, schedule meetings, draft replies, monitor Slack, and automate daily tasks." />
     <meta name="author" content="Zu" />
-    <script type="module" crossorigin src="/assets/index-ChMFeR3I.js"></script>
+    <script type="module" crossorigin src="/assets/index-i7uH-p03.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-Bkqx9KuN.css">
   </head>
 
   <body>
+    <script>
+      // GitHub Pages SPA redirect: decode path encoded by 404.html
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          });
+          window.history.replaceState(
+            null, null,
+            l.pathname.slice(0, -1) + decoded[0] +
+            (decoded[1] ? '&' + decoded[1] : '') +
+            l.hash
+          );
+        }
+      }(window.location));
+    </script>
     <div id="root"></div>
   </body>
 </html>
