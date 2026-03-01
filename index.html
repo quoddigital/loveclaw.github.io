@@ -1,24 +1,38 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTRXRWRDX6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NTRXRWRDX6');
+      gtag("event", "scroll", {
+        percent_scrolled: 90,
+      });
+
+      document.addEventListener("click", (e) => {
+        const a = e.target.closest("a");
+        if (!a) return;
+
+        const url = new URL(a.href, window.location.href);
+        if (url.origin !== window.location.origin) {
+          window.gtag("event", "click", {
+            link_url: a.href,
+            outbound: true,
+          });
+        }
+      });
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    <script type="module" crossorigin src="/assets/index-tbXYGVOa.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DIBsIbHS.css">
+    <title>Loveclaw AI - Boutique OpenClaw setup</title>
+    <meta name="description" content="An open-source AI assistant that runs 24/7 on appliance or dedicate infra. It can triage email, schedule meetings, draft replies, monitor Slack, and automate daily tasks." />
+    <meta name="author" content="Zu" />
+    <script type="module" crossorigin src="/assets/index-ChMFeR3I.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Bkqx9KuN.css">
   </head>
 
   <body>
